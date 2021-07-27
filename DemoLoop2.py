@@ -28,6 +28,20 @@ for item in lst:
         continue
     print("Item:{0}".format(item))
 
+#수열함수를 사용 
+print( range(10) )
+print( list(range(10)) )
+print( list(range(1,11)) )
+print( list(range(2000, 2022)) )
+
+#for루프를 사용할 수 있나요? 
+print("----수동반복----")
+for x in range(10):
+    print(x)
+
+
+
+
 
 
 
