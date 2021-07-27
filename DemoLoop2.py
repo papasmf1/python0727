@@ -40,6 +40,43 @@ for x in range(10):
     print(x)
 
 
+for x in [2,3,4,5,6]:
+    print("---{0}단---".format(x))
+    for y in [1,2,3,4,5,6,7,8,9]:
+        print("{0} * {1} = {2}".format(x,y,x*y), end=" ")
+    print("")
+    print("---------")
+
+
+print("---리스트 컴프리헨션---")    
+lst = list(range(1,11))
+print( lst )
+result = [i**2 for i in lst if i > 5]
+print(result)
+tp = ("apple", "orange")
+print( [len(i) for i in tp] )
+
+
+#필터링 
+lst = [10, 25, 30]
+iterL = filter(None, lst)
+for i in iterL:
+    print(i)
+
+#함수를 정의
+def getBiggerThan20(i):
+    return i > 20 
+    
+print("---필터링---")
+iterL = filter(getBiggerThan20, lst)
+for i in iterL:
+    print(i)
+
+
+
+
+
+
 
 
 
