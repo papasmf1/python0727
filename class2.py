@@ -18,7 +18,16 @@ p2 = Person()
 p3 = Person() 
 print("인스턴스의 갯수:", Person.num_person)
 
+#런타임(코드를 실행중)에 멤버 변수 추가
+Person.title = "new title"
+print( p1.title )
+print( p2.title )
+print( Person.title )
 
+#인스턴스에 추가
+p1.age = 30
+print( p1.age )
+print( p2.age )
 
 
 
