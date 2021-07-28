@@ -59,7 +59,7 @@ def times(a=10, b=20):
 
 #호출 
 print( times() )
-print( times(5) )
+print( times(b=3) )
 print( times(5,6) )
 
 #가변인자 처리(*는 튜플이라는 의미)
