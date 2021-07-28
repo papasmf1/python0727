@@ -40,3 +40,50 @@ def func2(a):
 
 #호출
 print( func2(1) )
+
+#불변형식을 함수내부에서 읽기+쓰기를 할 경우 맵핑 
+g = 1 
+def testScope(a):
+    #선택한 블럭을 주석처리: ctrl + /, cmd + /  
+    # global g 
+    # g = 2 
+    return a+g
+
+#호출
+print( testScope(1) ) 
+print("전역변수 g:", g) 
+
+#함수의 기본값 셋팅 
+def times(a=10, b=20):
+    return a*b 
+
+#호출 
+print( times() )
+print( times(5) )
+print( times(5,6) )
+
+#가변인자 처리(*는 튜플이라는 의미)
+def union(*ar):
+    result = []
+    for item in ar:
+        for x in item:
+            if x not in result:
+                result.append(x)
+    return result 
+
+#호출
+print( union("HAM","EGG") )
+print( union("HAM","EGG","SPAMM") )
+
+#정의되지 않은 인자 처리(**는 옵션으로 딕셔너리로 받기)
+def userURIBuilder(server, port, **user):
+    strURL = "http://" + server + ":" + port + "/?"
+    for key in user.keys():
+        strURL += key + "=" + user[key] + "&"
+    return strURL 
+
+#호출 
+print( userURIBuilder("credu.com", "80", id="kim", password="1234"))
+print( userURIBuilder("credu.com", "80", id="kim", password="1234",  
+    name="mike", age="30"))
+
