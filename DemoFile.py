@@ -26,6 +26,12 @@ for item in lst:
     #치환(패턴, 변경)
     print(item.replace("\n", "")) 
 
+#안전하게 작업을 종료 
+f.close() 
 
+#기존 파일에 첨부 
+f = open("c:\\work\\demo.txt", "a+")
+f.write("새로운 데이터\n")
+f.close() 
 
 
