@@ -17,8 +17,8 @@ class Student(Person):
         self.studentID = studentID
     #상속받은 메서드가 마음에 안들면 덮어쓰기 
     def printInfo(self):
-        print("Info(Name:{0}, Phone Number: {1})".format(
-            self.name, self.phoneNumber))
+        #부모의 메서드 명시적으로 호출 
+        Person.printInfo(self) 
         print("Info(Subject:{0}, StudentID: {1})".format(
             self.subject, self.studentID))
 
