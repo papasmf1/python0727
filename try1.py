@@ -3,10 +3,10 @@
 def divide(a,b):
     return a/b 
 
+#최종적으로 UI(화면)을 작성할 때 하시면 편리하다. 
 try:
     #함수를 호출
-    result = divide(5,0)
-
+    result = divide(5,2)
 except ZeroDivisionError:
     print("0으로 나누면 안됩니다.")
 except TypeError:
