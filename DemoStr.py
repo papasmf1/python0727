@@ -25,7 +25,21 @@ print("병합한 문자열:", result3)
 print("python is powerful".capitalize() )
 print("python is powerful".count("p") ) 
 print("python is powerful".count("p", 7) )
- 
+
+#정규 표현식
+import re 
+#정규표현식의 패턴과 매칭이 되면 매칭 객체가 리턴
+#match는 정확하게 일치
+print( bool(re.match("[0-9]*th", "35th")) )
+#패턴을 포함하고 있으면 검색(일반적인 검색) 
+print( bool(re.search("[0-9]*th", "35th")) )
+print("---함정---")
+print( bool(re.match("[0-9]*th", "  35th")) )
+#패턴을 포함하고 있으면 검색(일반적인 검색) 
+print( bool(re.search("[0-9]*th", "  35th")) )
+
+
+
 
 
 
