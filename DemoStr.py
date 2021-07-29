@@ -30,13 +30,23 @@ print("python is powerful".count("p", 7) )
 import re 
 #정규표현식의 패턴과 매칭이 되면 매칭 객체가 리턴
 #match는 정확하게 일치
-print( bool(re.match("[0-9]*th", "35th")) )
+print( bool(re.match("[0-9]*th", "35th")) ) 
 #패턴을 포함하고 있으면 검색(일반적인 검색) 
 print( bool(re.search("[0-9]*th", "35th")) )
 print("---함정---")
 print( bool(re.match("[0-9]*th", "  35th")) )
 #패턴을 포함하고 있으면 검색(일반적인 검색) 
 print( bool(re.search("[0-9]*th", "  35th")) )
+
+#문자열을 포함한 매칭 오브젝트
+result = re.search("apple", "this is apple")
+print(result.group() )
+
+#년도, 우편번호 찾기 
+print( bool(re.search("\d{4}", "올해는 2021년")) )
+print( bool(re.search("\d{5}", "우리 동네는 05223")) )
+
+
 
 
 
